@@ -49,6 +49,18 @@ describe("Author Quiz", ()=>{
     });
   });
 
+  describe("When the correct answer has been selected",()=>{
+    let wrapper;
+
+    beforeAll(()=>{
+      wrapper = mount(
+        <AuthorQuiz {...(Object.assign({},state,{highlight:'correct'}))} onAnswerSelected={()=>{}} />);
+    });
+
+    it("should have a green background color", ()=>{
+      expect(wrapper.find("div.row.turn").props().style.backgroundColor).toBe('green');
+    });
+  });
 });
 
 
