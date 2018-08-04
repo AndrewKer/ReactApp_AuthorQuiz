@@ -15,7 +15,7 @@ function Hero() {
 function Book({ title }) {
   return (
     <div className="answer">
-    
+      <h4>{title}</h4>
     </div>
   );
 }
